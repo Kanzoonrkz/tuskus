@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:tuskus/constant.dart';
 
 class AddTask extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FloatingActionButton(
+      backgroundColor: normalDarkMain,
       child: Text(
         '+',
         style: TextStyle(

@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
-import './addTask.dart';
+import 'package:tuskus/constant.dart';
+import 'package:tuskus/screens/mainList.dart';
+
+import 'components/addTask.dart';
 
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  var taskList = {
-    'Dummy001',
-  };
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -19,11 +18,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(),
       home: Scaffold(
         appBar: AppBar(
+          elevation: 0,
+          backgroundColor: normalDarkMain,
           title: Center(
-            child: Text('Appbar'),
+            child: Text('MENU'),
           ),
         ),
-        body: Text('TEXT'),
+        body: MainList(),
         floatingActionButton: AddTask(),
       ),
     );
