@@ -15,7 +15,9 @@ class MyApp extends StatelessWidget {
       //jangan lupa debug message diganti false sebelum deploy
       debugShowCheckedModeBanner: true,
       title: 'Tuskus',
-      theme: ThemeData(),
+      theme: ThemeData(
+        brightness: Brightness.dark,
+      ),
       home: Scaffold(
         appBar: AppBar(
           elevation: 0,
