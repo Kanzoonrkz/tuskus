@@ -3,6 +3,7 @@ import 'package:tuskus/constant.dart';
 import 'package:tuskus/screens/mainList.dart';
 
 import 'components/addTask.dart';
+import 'components/tabBar.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,16 +19,28 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         brightness: Brightness.dark,
       ),
-      home: Scaffold(
-        appBar: AppBar(
-          elevation: 0,
-          backgroundColor: normalDarkMain,
-          title: Center(
-            child: Text('MENU'),
+      home: DefaultTabController(
+        child: Scaffold(
+          body: MainList(),
+          floatingActionButton: AddTask(),
+          appBar: AppBar(
+            elevation: 0,
+            backgroundColor: normalDarkMain,
+            title: Center(
+              child: Text('TASK'),
+            ),
+            bottom: TabBar(
+              
+              indicatorPadding: EdgeInsets.symmetric(horizontal: 25),
+              tabs: [
+                Tab(text: 'TAB-01'),
+                Tab(text: 'TAB-02'),
+                Tab(text: 'TAB-03'),
+              ],
+            ),
           ),
         ),
-        body: MainList(),
-        floatingActionButton: AddTask(),
+        length: 3,
       ),
     );
   }
