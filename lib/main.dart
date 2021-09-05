@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:tuskus/constant.dart';
 import 'package:tuskus/screens/mainList.dart';
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
               child: Text('TASK'),
             ),
             bottom: TabBar(
-              
+              isScrollable: true,
               indicatorPadding: EdgeInsets.symmetric(horizontal: 25),
               tabs: [
                 Tab(text: 'TAB-01'),

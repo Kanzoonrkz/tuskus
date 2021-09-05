@@ -7,6 +7,7 @@ class TaskCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
+      physics: BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
       itemCount: taskList.length,
       itemBuilder: (context, index) {
         final Task task = taskList[index];
